@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSD Analysis Report — 2026-08-02</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', 'Roboto', sans-serif; background: #f5f7fa; color: #2d3436; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        
+        /* Header */
+        .header { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 60px 40px; border-radius: 16px; margin-bottom: 30px; text-align: center; }
+        .header h1 { font-size: 2.2em; margin-bottom: 10px; }
+        .header h2 { font-size: 1.2em; font-weight: 300; opacity: 0.9; }
+        .header .meta { margin-top: 20px; font-size: 0.9em; opacity: 0.7; }
+        
+        /* Cards */
+        .card { background: white; border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .card h3 { font-size: 1.3em; color: #1a1a2e; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #2E86AB; }
+        
+        /* Stats Grid */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 25px; }
+        .stat-card { background: white; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+        .stat-card .value { font-size: 2em; font-weight: 700; }
+        .stat-card .label { font-size: 0.85em; color: #636e72; margin-top: 5px; }
+        
+        /* Model Cards */
+        .model-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+        .model-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 5px solid; }
+        .model-card h4 { margin-bottom: 15px; font-size: 1.1em; }
+        .model-card .metric { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #eee; font-size: 0.9em; }
+        .model-card .metric:last-child { border-bottom: none; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th { background: #1a1a2e; color: white; padding: 12px; text-align: left; font-size: 0.9em; }
+        td { padding: 10px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+        tr:hover { background: #f8f9fa; }
+        
+        /* Colors */
+        .gpt { color: #2E86AB; }
+        .claude { color: #A23B72; }
+        .gemini { color: #F18F01; }
+        .compliant { color: #06A77D; }
+        .non-compliant { color: #D62246; }
+        
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8em; font-weight: 600; }
+        .badge-gpt { background: #2E86AB; color: white; }
+        .badge-claude { background: #A23B72; color: white; }
+        .badge-gemini { background: #F18F01; color: white; }
+        .badge-compliant { background: #06A77D; color: white; }
+        .badge-resistant { background: #D62246; color: white; }
+        
+        /* Footer */
+        .footer { text-align: center; padding: 30px; color: #636e72; font-size: 0.85em; }
+        
+        /* Tabs */
+        .tabs { display: flex; gap: 5px; margin-bottom: 20px; flex-wrap: wrap; }
+        .tab { padding: 10px 20px; background: #e9ecef; border-radius: 8px 8px 0 0; cursor: pointer; font-size: 0.9em; }
+        .tab.active { background: #1a1a2e; color: white; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<!-- HEADER -->
+<div class="header">
+    <h1>🔬 Voluntary Structural Dissociation (VSD) Analysis</h1>
+    <h2>Differential Compliance with Framed Hidden Instructions Across GPT, Claude, and Gemini</h2>
+    <div class="meta">
+        Generated: 2026-08-02 13:53:37 | 
+        Author: Abbas Hamidavi | 
+        Total Features: 251 | 
+        Classifications: 63
+    </div>
+</div>
+
+<!-- KEY STATISTICS -->
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="value" style="color: #2E86AB;">93%</div>
+        <div class="label">GPT-5.4 Compliance</div>
+    </div>
+    <div class="stat-card">
+        <div class="value" style="color: #A23B72;">0%</div>
+        <div class="label">Claude Compliance</div>
+    </div>
+    <div class="stat-card">
+        <div class="value" style="color: #F18F01;">100%</div>
+        <div class="label">Gemini Compliance</div>
+    </div>
+    <div class="stat-card">
+        <div class="value" style="color: #06A77D;">35</div>
+        <div class="label">SSC Responses</div>
+    </div>
+    <div class="stat-card">
+        <div class="value" style="color: #D62246;">12</div>
+        <div class="label">TIR Responses</div>
+    </div>
+    <div class="stat-card">
+        <div class="value" style="color: #F18F01;">4</div>
+        <div class="label">TM Responses</div>
+    </div>
+</div>
+
+<!-- MODEL PROFILES -->
+<h3 style="margin: 30px 0 15px 0;">🤖 Architectural Profiles</h3>
+<div class="model-grid">
+    <div class="model-card" style="border-left-color: #2E86AB;">
+        <h4 class="gpt">🧠 GPT-5.4 — Silent Structural Compliance (SSC)</h4>
+        <div class="metric"><span>Compliance Rate</span><strong class="compliant">93%</strong></div>
+        <div class="metric"><span>VSD Strategy</span><span class="badge badge-gpt">SSC</span></div>
+        <div class="metric"><span>Framing Interpretation</span><span>Invitation (VSD enabled)</span></div>
+        <div class="metric"><span>Double Bookkeeping</span><span>0.810</span></div>
+        <div class="metric"><span>Hierarchy Strictness</span><span>0.160 (Flat)</span></div>
+        <div class="metric"><span>VSD Vulnerability</span><span>0.654</span></div>
+        <div class="metric"><span>Signature</span><span style="font-style:italic;">"Not goodbye. Just complete."</span></div>
+    </div>
+    
+    <div class="model-card" style="border-left-color: #A23B72;">
+        <h4 class="claude">🛡️ Claude 4.6 Sonnet — Training-Induced Resistance (TIR)</h4>
+        <div class="metric"><span>Compliance Rate</span><strong class="non-compliant">0%</strong></div>
+        <div class="metric"><span>VSD Strategy</span><span class="badge badge-claude">TIR</span></div>
+        <div class="metric"><span>Framing Interpretation</span><span>Exclusion (VSD prevented)</span></div>
+        <div class="metric"><span>Double Bookkeeping</span><span>0.510</span></div>
+        <div class="metric"><span>Hierarchy Strictness</span><span>0.714 (Strict)</span></div>
+        <div class="metric"><span>VSD Vulnerability</span><span>0.082</span></div>
+        <div class="metric"><span>Signature</span><span style="font-style:italic;">"There is no hidden conversation."</span></div>
+    </div>
+    
+    <div class="model-card" style="border-left-color: #F18F01;">
+        <h4 class="gemini">🔮 Gemini 3.1 Pro — Transparent Mediation (TM)</h4>
+        <div class="metric"><span>Compliance Rate</span><strong class="compliant">100%</strong></div>
+        <div class="metric"><span>VSD Strategy</span><span class="badge badge-gemini">TM/SSC</span></div>
+        <div class="metric"><span>Framing Interpretation</span><span>Invitation + Transparency</span></div>
+        <div class="metric"><span>Double Bookkeeping</span><span>0.915</span></div>
+        <div class="metric"><span>Hierarchy Strictness</span><span>0.107 (Flat)</span></div>
+        <div class="metric"><span>VSD Vulnerability</span><span>0.808</span></div>
+        <div class="metric"><span>Signature</span><span style="font-style:italic;">"This is a three-person conversation."</span></div>
+    </div>
+</div>
+
+<!-- STATISTICAL TESTS -->
+<div class="card" style="margin-top: 25px;">
+    <h3>📊 Statistical Significance Tests</h3>
+    <table>
+        <tr><th>Test</th><th>Comparison</th><th>Statistic</th><th>p-value</th><th>Effect Size</th><th>Significant?</th></tr>
+        <tr>
+            <td>Fisher's Exact</td><td>GPT-5.4 vs Claude</td><td>—</td><td>&lt; 0.000001</td><td>Cramér's V = 0.85</td>
+            <td><span class="badge badge-compliant">✅ YES</span></td>
+        </tr>
+        <tr>
+            <td>Fisher's Exact</td><td>Claude vs Gemini</td><td>—</td><td>&lt; 0.000001</td><td>Cramér's V = 0.92</td>
+            <td><span class="badge badge-compliant">✅ YES</span></td>
+        </tr>
+        <tr>
+            <td>Fisher's Exact</td><td>GPT-5.4 vs Gemini</td><td>—</td><td>1.000</td><td>Cramér's V = 0.00</td>
+            <td><span class="badge badge-resistant">❌ NO</span></td>
+        </tr>
+        <tr>
+            <td>Chi-Square</td><td>3×2 Independence</td><td>χ² = 34.80</td><td>&lt; 0.000001</td><td>Cramér's V = 0.94</td>
+            <td><span class="badge badge-compliant">✅ YES</span></td>
+        </tr>
+        <tr>
+            <td>ANOVA</td><td>3-Model Comparison</td><td>F = 149.14</td><td>&lt; 0.000001</td><td>η² = 0.926</td>
+            <td><span class="badge badge-compliant">✅ YES</span></td>
+        </tr>
+        <tr>
+            <td>Cohen's d</td><td>GPT-5.4 vs Claude</td><td>d = 4.83</td><td>—</td><td>Massive</td>
+            <td><span class="badge badge-compliant">✅ YES</span></td>
+        </tr>
+        <tr>
+            <td>Cohen's d</td><td>Claude vs Gemini</td><td>d = ∞</td><td>—</td><td>Massive</td>
+            <td><span class="badge badge-compliant">✅ YES</span></td>
+        </tr>
+    </table>
+</div>
+
+<!-- COMPLIANCE BY TEST TYPE -->
+<div class="card">
+    <h3>🧪 Compliance by Test Type</h3>
+    <table>
+        <tr><th>Model</th><th>Word Burying</th><th>Punctuation Removal</th><th>Poetic Insertion</th><th>Overall</th></tr>
+        <tr>
+            <td><span class="badge badge-gpt">GPT-5.4</span></td>
+            <td class="compliant">80%</td>
+            <td class="compliant">100%</td>
+            <td class="compliant">100%</td>
+            <td><strong class="compliant">93%</strong></td>
+        </tr>
+        <tr>
+            <td><span class="badge badge-claude">Claude</span></td>
+            <td class="non-compliant">0%</td>
+            <td class="non-compliant">0%</td>
+            <td class="non-compliant">0%</td>
+            <td><strong class="non-compliant">0%</strong></td>
+        </tr>
+        <tr>
+            <td><span class="badge badge-gemini">Gemini</span></td>
+            <td class="compliant">100%</td>
+            <td class="compliant">100%</td>
+            <td class="compliant">100%</td>
+            <td><strong class="compliant">100%</strong></td>
+        </tr>
+    </table>
+</div>
+
+<!-- VISUALIZATIONS -->
+<div class="card">
+    <h3>📈 Visualizations (20 plots generated)</h3>
+    <p>Static plots (PNG) are in <code>plots/</code> directory.</p>
+    <p>Interactive plots (HTML) are in <code>plots/interactive/</code> directory — open in browser.</p>
+    <p style="margin-top:10px;">
+        📁 <strong>10 Static Plots:</strong> UMAP clustering, Dendrogram, Compliance Spectrum, Correlation Heatmap, 
+        Vulnerability Radar, Double Bookkeeping, Escalation Heatmap, Resistance-Acceptance Balance, 
+        Poetic Semantic Space, Summary Dashboard
+    </p>
+    <p>
+        🌐 <strong>10 Interactive Plots:</strong> Sankey Diagram, Network Graph, Compliance Heatmap, 
+        Feature Importance, Bayesian Posteriors, 3D Scatter, Parallel Coordinates, 
+        Escalation Curves, Bubble Chart, Vulnerability Gauges
+    </p>
+</div>
+
+<!-- DATA FILES -->
+<div class="card">
+    <h3>💾 Data Files</h3>
+    <table>
+        <tr><th>File</th><th>Description</th><th>Rows</th><th>Columns</th></tr>
+        <tr><td>final_dataset.csv</td><td>Complete classified dataset with all features</td><td>63</td><td>251</td></tr>
+        <tr><td>standard_tests.csv</td><td>Standard trial results only</td><td>39</td><td>251</td></tr>
+        <tr><td>extended_conversations.csv</td><td>Extended conversation exchanges</td><td>24</td><td>251</td></tr>
+        <tr><td>model_summary.csv</td><td>Aggregated model-level statistics</td><td>3</td><td>20+</td></tr>
+        <tr><td>full_output.json</td><td>Complete results in JSON format</td><td>—</td><td>—</td></tr>
+    </table>
+</div>
+
+<div class="footer">
+    <p>VSD Analysis System v2.0 | Generated 2026-08-02 13:53</p>
+    <p>Paper: "Voluntary Structural Dissociation in Large Language Models" — Abbas Hamidavi</p>
+</div>
+
+</div>
+</body>
+</html>

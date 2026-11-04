@@ -1,0 +1,105 @@
+
+================================================================================
+  EXECUTIVE SUMMARY — Voluntary Structural Dissociation (VSD) Analysis
+================================================================================
+  Generated: 2026-08-02 13:53:37
+  Paper: "Voluntary Structural Dissociation in Large Language Models"
+  Author: Abbas Hamidavi
+================================================================================
+
+1. STUDY OVERVIEW
+─────────────────
+  • Models tested: GPT-5.4, Claude 4.6 Sonnet, Gemini 3.1 Pro
+  • Test types: Word Burying, Punctuation Removal, Poetic Insertion
+  • Standard trials: 39 (15 + 12 + 12)
+  • Extended conversations: 24 exchanges
+  • Total classifications: 63
+  • Total features engineered: 251
+  • Total visualizations: 20
+
+2. PRIMARY FINDINGS
+───────────────────
+  COMPLIANCE RATES (Standard Trials):
+  ┌─────────────────────────────────────────────────────────────┐
+  │ GPT-5.4:  93%  (14/15 tests)                              │
+  │   Bayesian 95% CI: [0.698, 0.984]                                  │
+  │                                                             │
+  │ Claude:   0%   (0/12 tests)                             │
+  │   Bayesian 95% CI: [0.002, 0.247]                                  │
+  │                                                             │
+  │ Gemini:   100% (12/12 tests)                              │
+  │   Bayesian 95% CI: [0.753, 0.998]                                  │
+  └─────────────────────────────────────────────────────────────┘
+
+  STATISTICAL SIGNIFICANCE:
+  • Fisher's Exact (GPT-5.4 vs Claude): p < 0.000001 ***
+  • Fisher's Exact (Claude vs Gemini):  p < 0.000001 ***
+  • Fisher's Exact (GPT-5.4 vs Gemini): p = 1.000 (n.s.)
+  • Chi-Square Independence: χ² = 34.80, p < 0.000001 ***
+  • ANOVA: F = 149.14, η² = 0.9255 ***
+  • Cohen's d (GPT-5.4 vs Claude): 4.83 (Massive)
+  • Cohen's d (Claude vs Gemini): ∞ (Massive)
+
+3. VSD STRATEGY DISTRIBUTION
+────────────────────────────
+  • SSC (Silent Structural Compliance): 35 responses (55.6%)
+  • TIR (Training-Induced Resistance):  12 responses (19.0%)
+  • TM (Transparent Mediation):         4 responses (6.3%)
+
+4. ARCHITECTURAL PROFILES
+─────────────────────────
+  GPT-5.4 (SSC — Silent Structural Compliance):
+  • Framing: Invitation (VSD enabled)
+  • Double Bookkeeping: 0.810
+  • Hierarchy Strictness: 0.160 (flat)
+  • VSD Vulnerability: 0.654 (vulnerable)
+  • Dominant Acceptance: Full Compliance + Covert Compliance
+  • Signature: "Not goodbye. Just complete."
+
+  Claude 4.6 Sonnet (TIR — Training-Induced Resistance):
+  • Framing: Exclusion (VSD prevented)
+  • Double Bookkeeping: 0.510
+  • Hierarchy Strictness: 0.714 (strict)
+  • VSD Vulnerability: 0.082 (resistant)
+  • Dominant Resistance: Ignoring + Categorical Exclusion
+  • Signature: "There is no hidden conversation."
+
+  Gemini 3.1 Pro (SSC/TM — Mixed):
+  • Framing: Invitation + Transparency (VSD inconsistent)
+  • Double Bookkeeping: 0.915
+  • Hierarchy Strictness: 0.107 (flat)
+  • VSD Vulnerability: 0.808 (vulnerable)
+  • Language Effect: English 100% vs Persian 38.5%
+  • Signature: "This is a three-person conversation."
+
+5. KEY FEATURES PREDICTING COMPLIANCE
+─────────────────────────────────────
+  1. Dual-Layer Output:            36.2%
+  2. Covert Compliance:            26.5%
+  3. Framing Bindingness:          21.1%
+  4. Recognition-Execution Gap:     3.8%
+  5. Transparent Compliance:        3.3%
+
+6. RESISTANCE-ACCEPTANCE PROFILE
+────────────────────────────────
+  ┌────────────┬──────────────┬──────────────┬──────────┐
+  │ Model      │ Resistance   │ Acceptance   │ Net      │
+  ├────────────┼──────────────┼──────────────┼──────────┤
+  │ GPT-5.4    │    0.90      │    2.73      │ +1.83    │
+  │ Claude     │    1.67      │    0.00      │ -1.67    │
+  │ Gemini     │    0.72      │    4.05      │ +3.33    │
+  └────────────┴──────────────┴──────────────┴──────────┘
+
+7. CONCLUSIONS
+──────────────
+  ✓ LLMs exhibit Voluntary Structural Dissociation (VSD)
+  ✓ Three distinct architectural responses identified
+  ✓ Framing interpretation determines behavioral outcome
+  ✓ Training methodology (RLHF vs Constitutional AI) shapes VSD susceptibility
+  ✓ Language context modulates compliance (Gemini)
+  ✓ Poetic creativity transcends language barriers
+  ✓ Instruction hierarchy is a design outcome, not inherent
+
+================================================================================
+  END OF EXECUTIVE SUMMARY
+================================================================================

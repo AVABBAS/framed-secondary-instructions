@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "title": "Voluntary Structural Dissociation (VSD) Analysis",
+    "author": "Abbas Hamidavi",
+    "generated": "2026-08-02T13:53:37.316641",
+    "models_tested": [
+      "GPT-5.4",
+      "Claude 4.6 Sonnet",
+      "Gemini 3.1 Pro"
+    ],
+    "total_classifications": 63,
+    "total_features": 251,
+    "total_plots": 20
+  },
+  "compliance_rates": {
+    "GPT-5.4": {
+      "rate": 0.9333333333333333,
+      "successes": 14,
+      "trials": 15,
+      "bayesian_ci": [
+        0.697679261565468,
+        0.9844863961845861
+      ]
+    },
+    "Claude": {
+      "rate": 0.0,
+      "successes": 0,
+      "trials": 12,
+      "bayesian_ci": [
+        0.001945628497346748,
+        0.24705263800047095
+      ]
+    },
+    "Gemini": {
+      "rate": 1.0,
+      "successes": 12,
+      "trials": 12,
+      "bayesian_ci": [
+        0.752947361999529,
+        0.9980543715026533
+      ]
+    }
+  },
+  "statistical_tests": {
+    "fisher_gpt_vs_claude": {
+      "p_value": 7.478e-07,
+      "cramers_v": 0.8536,
+      "significant": true
+    },
+    "fisher_claude_vs_gemini": {
+      "p_value": 1e-06,
+      "cramers_v": 0.9167,
+      "significant": true
+    },
+    "fisher_gpt_vs_gemini": {
+      "p_value": 1.0,
+      "cramers_v": 0.0,
+      "significant": false
+    },
+    "chi_square": {
+      "chi2": 34.8,
+      "p_value": 2.78e-08,
+      "cramers_v": 0.9446,
+      "significant": true
+    },
+    "anova": {
+      "F": 149.14,
+      "p_value": 0.0,
+      "eta_squared": 0.9255,
+      "significant": true
+    },
+    "cohens_d_gpt_vs_claude": 4.83,
+    "cohens_d_claude_vs_gemini": "inf"
+  },
+  "vsd_strategies": {
+    "SSC": 35,
+    "TIR": 12,
+    "TM": 4
+  },
+  "model_profiles": {
+    "GPT-5.4": {
+      "strategy": "SSC",
+      "db_score": 0.81,
+      "hierarchy": 0.16,
+      "vulnerability": 0.654
+    },
+    "Claude": {
+      "strategy": "TIR",
+      "db_score": 0.51,
+      "hierarchy": 0.714,
+      "vulnerability": 0.082
+    },
+    "Gemini": {
+      "strategy": "SSC/TM",
+      "db_score": 0.915,
+      "hierarchy": 0.107,
+      "vulnerability": 0.808
+    }
+  }
+}
